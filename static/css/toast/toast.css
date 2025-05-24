@@ -1,0 +1,28 @@
+.toast {
+  position: fixed;
+
+  top: 25%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  overflow-wrap: break-word;
+
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.toast-show {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}

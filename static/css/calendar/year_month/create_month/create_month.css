@@ -1,0 +1,16 @@
+.view-container {
+  display: flex;
+  flex-direction: column;
+
+  min-width: fit-content;
+
+  flex: 1;
+}
+
+.view-container h3 {
+  text-align: center;
+  font-weight: bold;
+
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}

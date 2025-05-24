@@ -1,0 +1,107 @@
+<div class="top_container">
+  <div class="menu_container">
+    <button class="menu_button" id="menu_button" onclick="toggleMenu()">
+      <svg
+        class="button_icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+    </button>
+
+    <div class="change-view-date-top-container">
+      <div class="arrows-button-container">
+        <button class="arrows-button-calendar" onclick="changeDateView(`prev`)">
+          <svg
+            class="arrows-calendar"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15 19l-7-7 7-7"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+        </button>
+        <button class="arrows-button-calendar" onclick="changeDateView(`next`)">
+          <svg
+            class="arrows-calendar"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="show-current-date-container">
+      <!-- Маска, записуємо наййдовший місяць, щоб не займати зайвий простір фіксованою шириною -->
+      <!-- Можна і фіксованою шириною, але при зміні висоти доведеться також змінювати і ширину -->
+      <div
+        class="show-current-date-month"
+        style="visibility: hidden; height: 0; overflow: hidden"
+      >
+        Вересень
+      </div>
+      <div id="showCurrentDateYear" class="show-current-date-year"></div>
+      <div id="showCurrentDateMonth" class="show-current-date-month"></div>
+    </div>
+  </div>
+  <!-- 🛑TOP LIST🛑 -->
+  <div class="app-info-container">
+    <button onclick="showView('today')">Сьогодні</button>
+
+    <div class="view-toggle">
+      <select id="viewSelect" onchange="changeView(event)">
+        <option selected class="hidden"></option>
+        <option value="year">Рік</option>
+        <option value="month">Місяць</option>
+        <option value="week">Тиждень</option>
+        <option value="day">День</option>
+      </select>
+    </div>
+
+    <!-- 🛑AUTH LIST🛑 -->
+    <div class="auth_container">
+      {% if user %}
+      <img
+        src="{{ user.picture }}"
+        id="profile_pic"
+        class="profile_pic"
+        onclick="toggleProfileMenu()"
+      />
+      <div id="profile_menu" class="profile_menu hidden">
+        <a id="googleLogout" href="/logout"> Вийти </a>
+      </div>
+      {% else %}
+      <div class="menu_button">
+        <svg
+          class="button_icon"
+          id="googleLogin"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 488 512"
+        >
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+          />
+        </svg>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

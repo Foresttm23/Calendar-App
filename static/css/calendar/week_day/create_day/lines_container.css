@@ -1,0 +1,60 @@
+.lines-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; /* 🛑1🛑 */
+  bottom: 0;
+}
+
+.horizontal-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 0;
+  border-top: 1px solid lightgrey;
+
+  color: #000000;
+
+  z-index: 1;
+}
+
+.vertical-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 0;
+  border-left: 1px solid lightgrey;
+
+  z-index: 1;
+
+  transform: none;
+}
+
+.line-text-container {
+  display: flex;
+  position: relative;
+
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  min-width: 2.6rem;
+
+  background-color: rgb(255, 232, 99);
+
+  z-index: 20;
+}
+
+.horizontal-time {
+  position: absolute;
+
+  padding: 0;
+
+  user-select: none;
+
+  /* ✅✅✅✅ */
+  transform: translateY(-50%);
+}

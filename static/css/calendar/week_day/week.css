@@ -1,0 +1,24 @@
+.week-grid {
+  flex: 1;
+  /* overflow: auto; */
+
+  position: relative;
+
+  display: flex;
+
+  background-color: rgb(255, 243, 149);
+
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+
+  min-height: 125vh;
+}
+
+.week-container {
+  flex: 1;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}

@@ -1,0 +1,40 @@
+from flask_assets import Bundle
+
+js = Bundle(
+    "js/events/week_day/create_day/create_day.js",
+    "js/events/week_day/events_day.js",
+    "js/events/week_day/events_week.js",
+    "js/view_events_menu/view_events_menu.js",
+    "js/events/year_month/create_month/create_month.js",
+    "js/events/year_month/events_month.js",
+    "js/logs/logs.js",
+    "js/submenu_container/submenu_container.js",
+    "js/events/year_month/events_year.js",
+    "js/events/clicks/events_clicks.js",
+    "js/events/utils/events_modify_utils.js",
+    "js/toast/toast.js",
+    "js/events/utils/events_utils.js",
+    "js/events/utils/events_view_utils.js",
+    "js/events/DOMContentLoaded/DOMContentLoaded.js",
+    "js/const/const.js",
+    output="gen/packed.js",
+)
+
+css = Bundle(
+    "css/calendar/week_day/create_day/create_day.css",
+    "css/calendar/week_day/create_day/generate_holidays.css",
+    "css/calendar/week_day/create_day/lines_container.css",
+    "css/view_events_menu/view_events_menu.css",
+    "css/toast/toast.css",
+    "css/calendar/week_day/day.css",
+    "css/calendar/week_day/week.css",
+    "css/create_event_button/create_event_button.css",
+    "css/calendar/view/calendar_view.css",
+    "css/calendar/year_month/create_month/create_month.css",
+    "css/calendar/year_month/year.css",
+    "css/calendar/year_month/month.css",
+    "css/config/config.css",
+    "css/submenu/submenu_container.css",
+    "css/top/top_container.css",
+    output="gen/packed.css",
+)

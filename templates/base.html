@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calendar</title>
+
+    {% assets "css_all" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <!-- 🛑 🛑 -->
+    <script id="user_json" type="application/json">
+      {{ user | tojson | safe }}
+    </script>
+
+    {% assets "js_all" %}
+    <script src="{{ ASSET_URL }}" defer></script>
+    {% endassets %}
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.year-grid {
+  flex: 1;
+  overflow: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  row-gap: 0.65rem;
+  column-gap: 2.9rem;
+
+  margin-top: 0.45rem;
+}
+
+.month-day {
+  display: flex;
+  flex: 1;
+
+  font-size: 0.9rem !important;
+
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  background: rgb(255, 243, 149);
+
+  /* border: 1px solid lightgrey; */
+}
+
+.month-day:hover {
+  background-color: grey;
+  color: white;
+}

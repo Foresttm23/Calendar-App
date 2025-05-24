@@ -1,0 +1,65 @@
+.day-grid {
+  flex: 1;
+  overflow: auto;
+
+  position: relative;
+
+  display: flex;
+
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+
+  background-color: rgb(255, 243, 149);
+
+  min-height: 125vh;
+}
+
+.day-container {
+  flex: 1;
+
+  position: relative;
+
+  display: grid;
+}
+
+.day-info-container {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  flex: 1;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  /* 0.5rem */
+  padding-top: 0.4rem;
+
+  height: 100%;
+}
+
+.day-of-week-info {
+  font-size: 1rem;
+
+  font-weight: 500;
+}
+
+.day-num-info {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.day-info-month-container {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}

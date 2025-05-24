@@ -1,0 +1,164 @@
+.calendar {
+  height: 100%;
+
+  /* overflow: auto; */
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  /* 🛑2🛑 */
+  transition: margin-left 0.3s ease;
+}
+
+.view-toggle {
+  position: relative;
+
+  margin-right: var(--top-buttons-margin-sides);
+
+  height: 100%;
+}
+
+.view-toggle select {
+  height: 100%;
+
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+
+  background-color: rgb(255, 243, 149);
+
+  border: 0.25rem solid #ffffff;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.05s ease;
+}
+
+.view-toggle select:hover {
+  background-color: grey;
+  color: white;
+}
+
+.view-toggle select option {
+  color: black;
+
+  background-color: rgb(255, 243, 149);
+}
+
+.calendar-view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  /* Займає решту простору */
+
+  background: white;
+
+  padding: 0.5rem 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-info-container {
+  position: sticky;
+  top: 0;
+
+  /* Поки що для теста 🛑🛑🛑🛑🛑 */
+  height: 5.5rem;
+
+  display: flex;
+  overflow: hidden;
+
+  /* border-bottom: 2px solid white; */
+
+  /* margin-bottom: 0.5rem; */
+
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+
+  z-index: 10000;
+}
+.year-grid-info-container,
+.month-grid-info-container {
+  position: relative;
+  display: flex;
+  border-bottom: 2px solid white;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.year-grid-info-container {
+  height: 1.65rem;
+}
+
+.month-grid-info-container {
+  height: 4rem;
+}
+
+.change-view-date-calendar-container {
+  display: flex;
+  position: relative;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 6rem;
+
+  width: calc(2.6rem + 0.5rem + 0.5rem);
+
+  background-color: rgb(255, 232, 99);
+  z-index: 100;
+}
+
+.grid-date-info {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+
+  background-color: rgb(255, 243, 149);
+}
+
+.arrows-button-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+
+.arrows-button-calendar {
+  background: none;
+  border: none;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex: 1;
+}
+
+.arrows-button-calendar:hover {
+  background-color: grey;
+  color: white;
+}
+
+.arrows-calendar {
+  height: 100%;
+  width: 100%;
+}

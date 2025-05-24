@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+
+{% block content %} 
+
+{% include "create_event_button.html" %}
+{% include "view_events_menu.html" %}
+{% include "top_container.html"%} 
+{% include "toast.html"%} 
+<div class="bottom-container">
+{% include "submenu_container.html" %} 
+{% include "calendar.html" %} 
+</div>
+{%endblock %}

@@ -1,0 +1,204 @@
+.top_container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  gap: 3.5rem;
+
+  height: var(--max-height);
+
+  background-color: rgb(212, 229, 243);
+}
+
+.menu_container {
+  display: flex;
+
+  margin-left: var(--top-buttons-margin-sides);
+
+  height: 85%;
+}
+
+.menu_button {
+  position: relative;
+
+  padding: 0;
+
+  height: 100%;
+  aspect-ratio: 1;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.5rem;
+  transition: background-color 0.1s ease;
+}
+
+.menu_button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button_icon {
+  width: 65%;
+  height: 65%;
+  fill: #444;
+}
+
+/* 👌 */
+.app-info-container {
+  margin-right: var(--top-buttons-margin-sides);
+  /* left: calc(2 * var(--top-buttons-margin-sides) + var(--top-buttons-width)); */
+
+  display: flex;
+  align-items: center;
+
+  height: 85%;
+
+  padding: 0;
+}
+
+.app-info-container button {
+  position: relative;
+
+  margin-right: var(--top-buttons-margin-sides);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  background-color: rgb(255, 243, 149);
+
+  border: 0.25rem solid #ffffff;
+
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.05s ease;
+}
+
+.app-info-container button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.auth_container {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  user-select: none;
+}
+
+.profile_pic {
+  height: 100%;
+
+  transition: box-shadow 0.2s ease;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile_pic:hover {
+  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.profile_pic_blur {
+  filter: blur(0.2rem);
+}
+.profile_menu {
+  position: absolute;
+
+  align-items: center;
+
+  font-size: 0.5rem;
+}
+
+.profile_menu a {
+  background: white;
+  color: #000;
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+/* .google_icon {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.2s ease;
+}
+.google_icon:hover {
+  filter: brightness(1.2) invert(1);
+} */
+
+.change-view-date-top-container {
+  position: relative;
+
+  display: flex;
+
+  margin-left: var(--top-buttons-margin-sides);
+
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.show-current-date-container {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  margin-left: var(--top-buttons-margin-sides);
+  /* Якщо треба змінити розмір, міняємо і шрифт, можна зробити через var(--max-height), типу поділити на 5 і так далі */
+  font-size: calc(var(--max-height) / 5);
+
+  padding: 0 0.35rem;
+
+  /* Якщо треба все ж таки фіксована висота, можна взяти якісь середню */
+  /* width: 4rem; */
+
+  border-radius: 0.5rem;
+
+  /* background-color: rgb(255, 243, 149);
+  border: 0.25rem solid #ffffff; */
+}
+
+.show-current-date-year {
+  font-size: 100%;
+  text-align: center;
+
+  font-weight: 600;
+}
+
+.show-current-date-month {
+  font-size: 90%;
+  text-align: center;
+
+  font-weight: 500;
+}

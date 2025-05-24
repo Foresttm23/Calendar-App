@@ -1,0 +1,107 @@
+<div id="calendar" class="calendar">
+  <div id="year-view" class="calendar-view"></div>
+
+  <!-- /* 🛑🛑 */ -->
+  <div id="month-view" class="calendar-view"></div>
+
+  <div id="week-view" class="calendar-view hidden">
+    <div class="view-container">
+      <div class="grid-info-container">
+        <div class="change-view-date-calendar-container">
+          <div class="arrows-button-container">
+            <button
+              class="arrows-button-calendar"
+              onclick="changeDateView(`prev`)"
+            >
+              <svg
+                class="arrows-calendar"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15 19l-7-7 7-7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="arrows-button-calendar"
+              onclick="changeDateView(`next`)"
+            >
+              <svg
+                class="arrows-calendar"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 5l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="weekGridDateInfo" class="grid-date-info"></div>
+      </div>
+      <div id="week-grid" class="week-grid"></div>
+    </div>
+  </div>
+
+  <div id="day-view" class="calendar-view hidden">
+    <div class="view-container">
+      <div class="grid-info-container">
+        <div class="change-view-date-calendar-container">
+          <div class="arrows-button-container">
+            <button
+              class="arrows-button-calendar"
+              onclick="changeDateView(`prev`)"
+            >
+              <svg
+                class="arrows-calendar"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15 19l-7-7 7-7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg></button
+            ><button
+              class="arrows-button-calendar"
+              onclick="changeDateView(`next`)"
+            >
+              <svg
+                class="arrows-calendar"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 5l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="dayGridDateInfo" class="grid-date-info"></div>
+      </div>
+      <div id="day-grid" class="day-grid"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Логи</title>
+  </head>
+  <body
+    style="
+      background-color: rgb(255, 182, 37);
+      display: flex;
+      flex-direction: column;
+    "
+  >
+    <h1 style="text-align: center">Логи користувачів</h1>
+
+    <div style="width: 100%; display: flex">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Пошук..."
+        onkeyup="searchLogs()"
+        style="flex: 1"
+      />
+      <button onclick="searchLogs()">Пошук</button> <datalist>b</datalist>
+    </div>
+
+    {% if logs %}
+    <table
+      border="1"
+      width="100%"
+      style="background-color: antiquewhite; margin-top: 0.2rem"
+    >
+      <thead>
+        <tr>
+          <th style="color: blue">Дата</th>
+          <th style="color: green">Користувач</th>
+          <th style="color: red">Повідомлення</th>
+        </tr>
+      </thead>
+      <tbody id="logsTable">
+        {% for log in logs[:1000] %}
+        <tr class="log-list">
+          <td style="color: blue">{{ log.date }}</td>
+          <td style="color: green">{{ log.email }}</td>
+          <td style="color: red">{{ log.message }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>Немає логів для відображення.</p>
+    {% endif %}
+  </body>
+</html>

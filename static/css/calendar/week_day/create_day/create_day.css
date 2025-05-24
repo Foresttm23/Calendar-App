@@ -1,0 +1,58 @@
+.hour-slot {
+  position: relative;
+
+  display: grid;
+  flex: 1;
+
+  /* 🛑1🛑 */
+
+  /* background: #f18f96; */
+  font-weight: bold;
+
+  padding: 2rem;
+  /* 🛑1🛑 */
+  text-align: left;
+  align-items: center;
+
+  /* border-radius: 0.5rem; */
+  pointer-events: auto;
+}
+
+.events-container {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 0.5rem;
+  right: 0.5rem;
+}
+
+.event-slot {
+  display: flex;
+  position: absolute;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border-radius: 0.3rem;
+
+  min-height: fit-content !important;
+
+  justify-content: left;
+  align-items: start;
+
+  border: white 0.1rem solid;
+
+  /* rgb(132, 178, 244) */
+  background-color: lightgrey;
+  /* rgb(212, 229, 243) */
+
+  z-index: 10;
+
+  user-select: none;
+}
+
+.slot-event-text {
+  margin: 0.25rem 0.25rem;
+}
