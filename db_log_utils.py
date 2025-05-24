@@ -47,7 +47,7 @@ def endpoint_log_action():
     if not user_email or not message:
         log_action("admin", "Endpoint_log_action: Emty Message or User Email")
 
-        return jsonify({"error": "Недостатньо даних"}), 400
+        return jsonify({"error": "Not Enough Data"}), 400
 
     return log_action(user_email, message)
 
